@@ -2,12 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Error404 from './views/Error404';
+import Wallets from './views/Wallets';
 import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import Connect from './views/connect';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <Error404/>
+  },
+  {
+    path: "/Wallets",
+    element: <Wallets/>,
+    errorElement: <Error404/>
+  },
+  {
+    path: "/connect/:wallet",
+    element: <Connect/>,
+    errorElement: <Error404/>
+  },
+ 
+ 
+]);
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

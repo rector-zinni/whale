@@ -1,0 +1,129 @@
+$rk-fonts-body: SFRounded, ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fg1:rgb(229, 231, 235);
+$lemon:rgb(19, 241, 149);
+$layout-breakpoint-small:350px;
+$layout-breakpoint-medium:800px;
+
+.connect{
+    color: $fg1;
+    padding: 4em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.tab{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    font-size: 1.5em;
+}
+.tabs>label{
+    border: 1px solid $fg1;
+    padding: .5em 1em;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: all 500ms;
+}
+input[name=tab]{
+    display: none;
+}
+input[name=tab]:checked+label{
+    color: #171f2e;
+    background-color: $fg1;
+    border-radius: .5em .2em .2em .2em;
+    
+}
+.contents{
+}
+.contents >div{
+    display: none;
+   // opacity: 0;
+    transition: opacity 500ms;
+}
+.content-1-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    
+
+  
+
+}
+.nics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nics>textarea, .pass>input{
+    width: 100%;
+    background-color:#171f2e;
+    border: 0;
+    outline: 0;
+    border-radius: .5em;
+    color: $fg1;
+    padding: 1em .5em;
+    font-size: 2em;
+
+}
+
+.nics>textarea:focus, .pass>input:focus{
+    width: 100%;
+    background-color:  #212b3d;
+    border: 0;
+    outline: 0;
+    border-radius: .5em;
+        
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+.pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pass>input{
+    width: 100%;
+}
+.nics-btn{
+    text-align: center;
+}
+.nics-btn button{
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .7em;
+    font-size: 2em;
+    background-color: rgb(13, 94, 56);
+    color: $fg1;
+    border: 0;
+    outline: 0;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: all;
+}
+.nics-btn button:focus{
+    background-color: rgb(13, 94, 56,0.5);
+
+    color: #132118;
+}
+.nics-btn button:hover{
+    background-color: rgb(10, 83, 56,0.8);
+
+    color: #ffffff;
+}
+
+.content-1{
+    display: block;
+}

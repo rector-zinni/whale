@@ -1,0 +1,147 @@
+
+$rk-fonts-body: SFRounded, ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fg1:rgb(149, 150, 152);
+$lemon:rgb(19, 241, 149);
+$layout-breakpoint-small:350px;
+$layout-breakpoint-medium:800px;
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    @media (max-width: $layout-breakpoint-medium) {
+        grid-template-columns:1fr;
+      }
+      
+      @media (max-width: $layout-breakpoint-small) {
+        grid-template-columns: 1fr;
+      }
+}
+
+.circle-loader{
+    border: 1px solid $lemon;
+}
+.card-items{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: .4em;
+    background-color:#171D29;
+    padding: 1em;
+    border-radius: 1em;
+    transition: all 500ms;
+   
+}
+.card-items:hover{
+    background-color:#222733;
+    cursor: pointer;
+}
+.c1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c2{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        max-width: 1.5em;
+        border-radius: 50%;
+}
+}
+
+.c31{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    gap: .3em;
+}
+.c32{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: greenyellow;
+    gap: .3em;
+}
+
+.ui-widgets {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.3em;
+   padding: 1em;
+    border-radius: 50%;
+    
+}
+.imgark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.ark{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.ark p{
+margin: 0;
+font-weight: bold;
+}
+.ark span{
+
+}
+        .imgark img{
+                max-width: 5em;
+                border-radius: 50%;
+        }
+
+@for $n from 1 through 100 {
+   
+    $p:'%';
+      .bg-#{$n} {
+        background: 
+      radial-gradient(closest-side, #0e1420 79%, transparent 80% 100%),
+      conic-gradient(rgb(19, 151, 5) #{$n}#{$p}, #42454a 0); 
+      }
+    
+  }
+
+  .bottom-time{
+    border-top: 1px solid rgb(47, 47, 49);
+    margin-top: 1em;
+    padding: 1.3em .1em 1em .1em;
+  }
+
+  .bottom-time> div{
+   display: flex;
+   justify-content: space-between;
+   span{
+    color: $fg1;
+   }
+   button{
+    border-radius: .3em;
+    background-color: #222733;
+    border: none;
+    outline: none;
+    padding: .4em .6em .4em .7em;
+    transition: all 500ms;
+    color: $fg1;
+   }
+
+   button:hover{
+   background-color: $lemon;
+   color: #42454a;
+   cursor: pointer;
+   }
+  }

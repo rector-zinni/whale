@@ -1,0 +1,195 @@
+
+$rk-fonts-body: SFRounded, ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fg1:rgb(149, 150, 152);
+$lemon:rgb(19, 241, 149);
+$layout-breakpoint-small:350px;
+$layout-breakpoint-medium:800px;
+.main{
+    display: flex;
+    flex-direction: column;
+    color:$fg1;
+    padding: 1em;
+   
+}
+.header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header>.title{
+   padding: 1em;
+   font-size: 1.8em;
+   font-weight: 500;
+   white-space: nowrap;
+   text-rendering: optimizeLegibility;
+}
+.token-check{
+    display: flex;
+    border: 1px solid $fg1;
+    padding: .5em;
+    border-radius: .5em;
+    
+}
+
+.token-check>img{
+    width: 2em;
+    border-radius: .5em;
+}
+
+.token-check>select{
+   background-color: transparent;
+   color: $fg1;
+   border: 0;
+   @media (max-width: $layout-breakpoint-medium) {
+     
+    display: none;
+  }
+  
+  @media (max-width: $layout-breakpoint-small) {
+  
+  }
+}
+.token-check>select:focus{
+    border: 0;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5em;
+    cursor: pointer;
+
+}
+.header-nav>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    background-color: $lemon;
+    border: none;
+    font-size: 1.3em;
+    padding: .7em;
+    border-radius: .5em;
+ >span{
+    @media (max-width: $layout-breakpoint-medium) {
+     
+        display: none;
+      }
+      
+      @media (max-width: $layout-breakpoint-small) {
+      
+      }
+ }
+}
+.header-nav>button:focus{
+border: none;
+}
+.sun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $fg1;
+    padding: .7em;
+    border-radius: .5em;
+    span{
+        font-size: 1.2em;
+    }
+}
+
+.swipe{
+display: flex;
+overflow-x: hidden;
+overflow-y: hidden;
+gap: 1em;
+
+@media (max-width: $layout-breakpoint-medium) {
+        
+    justify-content: start;
+  }
+  
+  @media (max-width: $layout-breakpoint-small) {
+width: 100%;
+  }
+
+}
+.swipe::-webkit-scrollbar{
+    width: 0;
+}
+
+-webkit-scrollbar{
+    width: 0;
+}
+
+
+.swipe-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    min-height: 12em;
+    
+    min-width:30%;
+    position: relative;
+    transition: all 1s;
+    animation: movex 30s infinite;
+
+    @media (max-width: 1100px) {
+        min-width:70%;
+        justify-content: start;
+      }
+      
+      @media (max-width: $layout-breakpoint-small) {
+        min-width:98%;
+        min-height: 10em;
+        height: 10em;
+      }
+}
+
+@keyframes movex {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-800px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
+.swipe-item:first-child{
+    background-image: url('../assets/AARK-LIVE.png');
+}
+.swipe-item:nth-child(2){
+    background-image: url('../assets/ZKL.png');
+}
+
+.swipe-item:nth-child(3){
+    background-image: url('../assets/MERL.png');
+}
+
+.swipe-item:nth-child(4){
+    background-image: url('../assets/MON.png');
+}
+
+.swipe-item:nth-child(5){
+    background-image: url('../assets/MOR.png');
+}
+
+.swipe-item:nth-child(6){
+    background-image: url('../assets/Runestone.png');
+}
+.swipe-item:nth-child(7){
+    background-image: url('../assets/W.png');
+}
+.swipe-item:last-child{
+    background-image: url('../assets/ZEND.png');
+}
+
+
+
